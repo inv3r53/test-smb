@@ -1,0 +1,60 @@
+# ------------------------------------------------------------------------------ #
+# Java defaults (https://github.com/github/gitignore/blob/master/Java.gitignore) #
+# ------------------------------------------------------------------------------ #
+*.class
+.project
+# Package Files #
+*.jar
+*.war
+*.ear
+.idea
+*.iml
+
+# ------------------------------------------------------------------------------------------- #
+# Eclipse-specific (https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore) #
+# ------------------------------------------------------------------------------------------- #
+*.pydevproject
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+# .project
+.classpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+# --------------- #
+# Studio-specific #
+# --------------- #
+.studio/
+studio_id.xml
+flows/
+target/
+catalog/*
+**/*.mflow
+/.mule/
+/src/main/resources/secrets/*
+/src/main/resources/app
+/src/main/resources/openshift/
+/src/main/resources/routes/
+.DS_Store
+velocity.log
+
+~$*.xlsx
