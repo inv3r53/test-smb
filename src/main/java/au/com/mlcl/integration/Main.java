@@ -27,8 +27,8 @@ public class Main {
 
 		// java args - host "" username shareName password
 		// localhost "" su.dg XXXXXXX1 share
-		if (args == null || args.length < 4) {
-			System.out.println("Must pass args: host domain user share [password]");
+		if (args == null || args.length < 5) {
+			System.out.println("Must pass args: host domain user share folder [password]");
 			System.exit(1);
 		}
 		String password = "";
@@ -36,8 +36,9 @@ public class Main {
 		String domain = args[1].trim();
 		String user = args[2].trim();
 		String sharePath = args[3].trim();
-		if (args.length == 5) {
-			password = args[4].trim();
+		String folder = args[4].trim();
+		if (args.length == 6) {
+			password = args[5].trim();
 		} else {
 			Console console = System.console();
 
@@ -60,7 +61,7 @@ public class Main {
 					System.out.println("File : " + f.getFileName());
 				}
 
-				writeFile(share, "smb-test.txt", "", false, "hello test" + (new Date()), "UTF-8");
+				writeFile(share, "smb-test.txt", folder, false, "hello test" + (new Date()), "UTF-8");
 			}
 		} finally {
 			client.close();
